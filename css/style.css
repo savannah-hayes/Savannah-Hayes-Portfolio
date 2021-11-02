@@ -1,0 +1,63 @@
+:root {
+  --ff-primary: "Open Sans", sans-serif;
+
+  --fw-reg: 300;
+  --fw-bold: 700;
+  --fw-bolder: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #359aea;
+  --clr-accent: #ece9e9;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.62);
+  content: "";
+}
+
+.banner-image {
+  height: 700px;
+  width: 100%;
+}
+
+.layered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+h1 {
+  line-height: 2;
+  font-size: 55px;
+  color: var(--clr-dark);
+}
+
+.layered p {
+  font-size: 30px;
+  color: var(--clr-light);
+}
+
+a {
+  color: black;
+}
+
+footer {
+  background-color: var(--clr-accent);
+}
