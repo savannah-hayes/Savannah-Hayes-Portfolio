@@ -83,7 +83,7 @@ h3 {
 
 .section__subtitle--intro {
   font-size: var(--fs-h2);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-reg);
   color: var(--clr-light);
 }
 
@@ -160,11 +160,24 @@ h3 {
   position: relative;
 }
 
-@media (min-width: 600px) {
-  .into__image {
-    min-width: 250px;
-    position: relative;
-  }
+.about-me__text + .about-me__text {
+  margin-top: 20px;
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__skills {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.about-me__icons {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .my-services {
@@ -203,6 +216,24 @@ h3 {
 .service {
   max-width: 500px;
   margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-areas:
+      "title img"
+      "text img";
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .about-me__image {
+    grid-area: img;
+    margin-top: 110px;
+  }
 }
 
 @media (min-width: 800px) {
