@@ -217,8 +217,12 @@ h3 {
 }
 
 .service {
-    max-width: 500px;
     margin: 0 auto;
+}
+
+.service__text {
+    width: 380px;
+    margin-top: 30px;
 }
 
 .my-work {
@@ -226,7 +230,7 @@ h3 {
 }
 
 .portfolio {
-    border: 1px solid rgb(52, 52, 52);
+    border: 2px solid rgb(52, 52, 52);
     width: 400px;
     height: 410px;
     display: inline-block;
@@ -240,10 +244,6 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.portfolio--bg-black {
-    background-color: black;
 }
 
 .portfolio--bg-grey {
@@ -307,9 +307,6 @@ footer {
     .services,
     .overlay {
         display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
     }
     .service+.service {
         margin-left: 2em;
