@@ -1,185 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Savannah Hayes Portfolio Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <button class="nav-toggle" aria-label="toggle navigation">
+      <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
       </button>
-        <nav class="nav">
-            <ul class="nav__list" id="nav">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">About Me</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#skills" class="nav__link">Skills</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#work" class="nav__link nav__link--last">Portfolio</a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link nav__link--last">Projects</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="banner" id="home">
-            <div class="overlay">
-                <div class="layered">
-                    <h1 class="section__title section__title--intro">
-                        Frontend Web Developer
-                    </h1>
-                    <p class="section__subtitle section__subtitle--intro">
-                        with a passion for learning
-                    </p>
-                </div>
-            </div>
-        </section>
+      <section class="banner" id="home">
+        <div class="overlay">
+          <div class="layered">
+            <h1 class="section__title section__title--intro">
+              Frontend Web Developer
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">
+              with a passion for learning
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="about-me" id="about">
-            <img class="about-me__image" src="https://github.com/savannah-hayes/public-images/blob/main/pic-transparent.png?raw=true" alt="a picture of savannah hayes smiling" />
-            <header class="section__header">
-                <h2 class="section__title section__title--right">
-                    Savannah <span>Hayes</span>
-                </h2>
-            </header>
+      <section class="about-me" id="about">
+        <img
+          class="about-me__image"
+          src="https://github.com/savannah-hayes/public-images/blob/main/pic-transparent.png?raw=true"
+          alt="a picture of savannah hayes smiling"
+        />
+        <header class="section__header">
+          <h2 class="section__title">
+            Savannah Hayes
+          </h2>
+        </header>
 
-            <div class="about-me__body">
-                <p class="about-me__text">
-                    I’m a Frontend Developer based in Stockholm with a background in finance. I love building 
-                    accessible applications on the web and my goal is to be able work as a Full Stack Developer 
-                    in the future. I am a flexible person who likes planning but also to dive in. 
-                </p>
-                <p class="about-me__text">
-                    Being able to develop my skills in all aspects of the development process and getting the 
-                    chance to collaborate with others is important to me. I want to work in an environment where 
-                    I can learn from others and be able to develop and grow. 
-                </p>
-                <ul class="about-me__skills">
-                    <li>
-                        <img class="about-me__icons" src="./images/js.png" alt="JavaScript" title="JavaScript" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/html.png" alt="HTML" title="HTML" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/css.png" alt="CSS" title="CSS" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/figma.png" alt="Figma" title="Figma" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/react.png" alt="React" title="React" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/bootstrap.png" alt="Bootstrap" title="Bootstrap" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/sass.png" alt="SASS" title="SASS" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/sql.png" alt="SQL" title="SQL" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/git.png" alt="Git" title="Git" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/github.png" alt="github" title="github" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/node.png" alt="Node" title="Node" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/mocha.png" alt="Mocha" title="Mocha" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/handlbar.png" alt="Handlebar" title="Handlebar" />
-                    </li>
-                    <li>
-                        <img class="about-me__icons" src="./images/jquery.png" alt="jquery" title="jquery" />
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div class="about-me__body">
+          <p class="about-me__text">
+            I’m a Frontend Developer based in Stockholm with a background in
+            finance. I love building accessible applications on the web and my
+            goal is to be able work as a Full Stack Developer in the future. I
+            am a flexible person who likes planning but also to dive in.
+          </p>
+          <p class="about-me__text">
+            Being able to develop my skills in all aspects of the development
+            process and getting the chance to collaborate with others is
+            important to me. I want to work in an environment where I can learn
+            from others and be able to develop and grow.
+          </p>
+          <ul class="about-me__skills">
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/js.png"
+                alt="JavaScript"
+                title="JavaScript"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/html.png"
+                alt="HTML"
+                title="HTML"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/css.png"
+                alt="CSS"
+                title="CSS"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/figma.png"
+                alt="Figma"
+                title="Figma"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/react.png"
+                alt="React"
+                title="React"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/bootstrap.png"
+                alt="Bootstrap"
+                title="Bootstrap"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/sass.png"
+                alt="SASS"
+                title="SASS"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/sql.png"
+                alt="SQL"
+                title="SQL"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/git.png"
+                alt="Git"
+                title="Git"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/github.png"
+                alt="github"
+                title="github"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/node.png"
+                alt="Node"
+                title="Node"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/mocha.png"
+                alt="Mocha"
+                title="Mocha"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/handlbar.png"
+                alt="Handlebar"
+                title="Handlebar"
+              />
+            </li>
+            <li>
+              <img
+                class="about-me__icons"
+                src="assets/images/jquery.png"
+                alt="jquery"
+                title="jquery"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <section class="my-services" id="skills">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Developement</h3>
-                    <p class="service__text">
-                        I am a Frontend developer that enjoys following the entire development process from initiation 
-                        to disposition. I love turning designs into code and taking responsibility of that process. I 
-                        know that I can learn a lot from designers and senior developers.
-                    </p>
-                </div>
+      <section class="skills" id="skills">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Developement</h3>
+            <p class="service__text">
+              I am a Frontend developer that enjoys following the entire
+              development process from initiation to disposition. I love turning
+              designs into code and taking responsibility of that process. I
+              know that I can learn a lot from designers and senior developers.
+            </p>
+          </div>
 
-                <div class="service">
-                    <h3>Finance</h3>
-                    <p class="service__text">
-                        I believe my background in finance, strong analytical ability, and problem-solving skills allows
-                        me to be a better developer. For as long as I remember, I have been interested in numbers and 
-                        mathematics. I love solving problems no matter how big or small. 
-                    </p>
-                </div>
+          <div class="service">
+            <h3>Finance</h3>
+            <p class="service__text">
+              I believe my background in finance, strong analytical ability, and
+              problem-solving skills allows me to be a better developer. For as
+              long as I remember, I have been interested in numbers and
+              mathematics. I love solving problems no matter how big or small.
+            </p>
+          </div>
 
-                <div class="service">
-                    <h3>React</h3>
-                    <p class="service__text">
-                        Out of all the technologies I have worked with so far, React is one of my favorites. I believe that 
-                        React is helping me improve my skills in JavaScript. As a developer I love to keep up to date 
-                        with the latest technologies and love to learn from others. 
-                    </p>
-                </div>
-            </div>
+          <div class="service">
+            <h3>React</h3>
+            <p class="service__text">
+              Out of all the technologies I have worked with so far, React is
+              one of my favorites. I believe that React is helping me improve my
+              skills in JavaScript. As a developer I love to keep up to date
+              with the latest technologies and love to learn from others.
+            </p>
+          </div>
+        </div>
 
-            <a href="#work" class="button">My Work</a>
-        </section>
+        <a href="#projects" class="button">My Work</a>
+      </section>
 
-        <section class="my-work" id="work">
-            <header>
-                <h2 class="section__title">Portfolio</h2>
-                <p class="section__subtitle"></p>
-            </header>
+      <section class="projects" id="projects">
+        <header>
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle"></p>
+        </header>
 
-            <div class="portfolio portfolio--bg-grey">
-                <a href="#" class="portfolio__item">
-                    <img class="portfolio__image" src="./images/weather.png" alt="Weather application built by Savannah Hayes" />
-                </a>
-            </div>
+        <div class="portfolio portfolio--bg-grey">
+          <a href="#" class="portfolio__item">
+            <img
+              class="portfolio__image"
+              src="assets/images/weather.png"
+              alt="Weather application built by Savannah Hayes"
+            />
+          </a>
+        </div>
 
-            <div class="portfolio">
-                <a href="#" class="portfolio__item">
-                    <img src="./images/dictionary.png" alt="Dictionary applicaiton built by Savannah Hayes" />
-                </a>
-            </div>
+        <div class="portfolio">
+          <a href="#" class="portfolio__item">
+            <img
+              src="assets/images/dictionary.png"
+              alt="Dictionary applicaiton built by Savannah Hayes"
+            />
+          </a>
+        </div>
 
-            <div class="portfolio portfolio--bg-grey">
-                <a href="#" class="portfolio__item">
-                    <img src="./images/snake.png" alt="Snake game built by Savannah Hayes">
-                </a>
-            </div>
-        </section>
+        <div class="portfolio portfolio--bg-grey">
+          <a href="#" class="portfolio__item">
+            <img
+              src="assets/images/snake.png"
+              alt="Snake game built by Savannah Hayes"
+            />
+          </a>
+        </div>
+      </section>
 
-        <footer>
-            <a href="tel:+46704849371" class="list-icons__link list-icons__link--top">+46 704849371</a
+      <footer>
+        <a
+          href="tel:+46704849371"
+          class="list-icons__link list-icons__link--top"
+          >+46 704849371</a
         >
         <a href="mailto:savannah.hayes1@hotmail.com" class="list-icons__link"
           >savannah.hayes1@hotmail.com</a
@@ -189,21 +286,27 @@
           <li class="social-list__item">
             <img
               class="social-list__image"
-              src="./images/Linkedin.png"
+              src="assets/images/Linkedin.png"
               alt="linkedIn icon"
             />
             <a
               href="https://github.com/savannah-hayes"
               class="social-list__link"
             ></a>
-            </li>
-            <li class="social-list__item">
-                <img class="social-list__image" src="./images/github.jpeg" alt="Linkedin icon" />
-                <a href="linkedin.com/in/savannah-hayes-128b0418a" class="social-list__link"></a>
-            </li>
-            </ul>
-        </footer>
+          </li>
+          <li class="social-list__item">
+            <img
+              class="social-list__image"
+              src="assets/images/github.jpeg"
+              alt="Linkedin icon"
+            />
+            <a
+              href="linkedin.com/in/savannah-hayes-128b0418a"
+              class="social-list__link"
+            ></a>
+          </li>
+        </ul>
+      </footer>
     </main>
-</body>
-
+  </body>
 </html>

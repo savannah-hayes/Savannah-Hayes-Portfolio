@@ -7,28 +7,29 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #359aea;
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: .80rem;
+    --fs-body: .75rem;
 }
 
 @media (min-width: 800px) {
      :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-h1: 3.5rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.25rem;
+        --fs-body: 1.1rem;
     }
 }
 
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
-    margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 section {
@@ -66,7 +67,7 @@ h3 {
 }
 
 h1 {
-    font-size: var(--fs-h1);
+    font-size: 1.5rem;
     color: var(--clr-dark);
 }
 
@@ -84,19 +85,14 @@ h3 {
     color: var(--clr-dark);
 }
 
-.section__title {
-    margin-top: 1em;
-    margin-bottom: 0.25em;
-}
-
-.section__title--right {
-    text-align: right;
-    font-size: 2.1rem;
-}
-
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+}
+
+.section__title {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
 }
 
 .section__subtitle--intro,
@@ -105,12 +101,18 @@ h3 {
     font-family: var(--ff-secondary);
 }
 
+.section__title--larger {
+    font-size: var(--fs-h1);
+}
+
 .banner {
-    height: 750px;
     margin-top: 50px;
     background-blend-mode: lighten;
     background-color: var(--clr-dark);
     background-image: url(../images/landscape.jpg);
+    text-align: center;
+    background-size: cover;
+    height: 400px;
 }
 
 .overlay {
@@ -120,6 +122,7 @@ h3 {
 .layered {
     width: 100%;
     margin: 0 auto;
+    max-width: 1600px;
 }
 
 .nav {
@@ -130,6 +133,7 @@ h3 {
     width: 100%;
     height: 80px;
     z-index: 2;
+    max-width: 1600px;
 }
 
 .nav__list {
@@ -158,6 +162,10 @@ h3 {
     color: var(--clr-accent);
 }
 
+.hamburger {
+    display: block;
+}
+
 .intro {
     position: relative;
 }
@@ -182,18 +190,13 @@ h3 {
     height: 45px;
 }
 
-.my-services {
+.skills {
     background-color: var(--clr-dark);
     background-image: url(../images/laptop.png);
     background-blend-mode: multiply;
-    color: var(--clr-accent);
-}
-
-.my-services,
-.banner {
-    background-size: cover;
     color: var(--clr-light);
     text-align: center;
+    background-size: cover;
 }
 
 .section__title--services {
@@ -218,6 +221,12 @@ h3 {
 
 .service {
     margin: 0 auto;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.service:first-child {
+    margin-top: 10px;
 }
 
 .service__text {
@@ -225,7 +234,7 @@ h3 {
     margin-top: 30px;
 }
 
-.my-work {
+.projects {
     text-align: center;
 }
 
@@ -280,6 +289,15 @@ footer {
 }
 
 @media (min-width: 600px) {
+    h1 {
+        font-size: var(--fs-h1);
+    }
+    .section__subtitle {
+        font-size: var(--fs-h2);
+    }
+    .service__text {
+        display: flex;
+    }
     .about-me {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -301,14 +319,22 @@ footer {
 }
 
 @media (min-width: 800px) {
+    .banner {
+        height: 750px;
+    }
     .section__title--right {
         font-size: 3.5rem;
-    }
-    .services,
-    .overlay {
-        display: flex;
     }
     .service+.service {
         margin-left: 2em;
     }
+    .service {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    h1 {
+        font-size: 4.5rem;
+    }  
 }
