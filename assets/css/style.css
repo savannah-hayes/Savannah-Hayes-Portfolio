@@ -91,7 +91,7 @@ h3 {
 }
 
 .section__title {
-    margin-top: 1em;
+    margin-top: 2.5em;
     margin-bottom: 0.25em;
 }
 
@@ -105,8 +105,53 @@ h3 {
     font-size: var(--fs-h1);
 }
 
+.nav {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 80px;
+    width: 100%;
+    z-index: 2;
+    max-width: 1600px;
+}
+
+.nav__link {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: var(--fw-reg);
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--clr-light)
+} 
+
 .banner {
-    margin-top: 50px;
     background-blend-mode: lighten;
     background-color: var(--clr-dark);
     background-image: url(../images/landscape.jpg);
@@ -123,47 +168,6 @@ h3 {
     width: 100%;
     margin: 0 auto;
     max-width: 1600px;
-}
-
-.nav {
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.95);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 2;
-    max-width: 1600px;
-}
-
-.nav__list {
-    float: right;
-}
-
-.nav__item {
-    float: left;
-    transform: translateY(100%);
-}
-
-.nav__link--last {
-    margin-right: 25px;
-}
-
-.nav__link {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: var(--fw-reg);
-}
-
-.nav__link:hover {
-    color: var(--clr-accent);
-}
-
-.hamburger {
-    display: block;
 }
 
 .intro {
@@ -197,6 +201,7 @@ h3 {
     color: var(--clr-light);
     text-align: center;
     background-size: cover;
+    height: 700px;
 }
 
 .section__title--services {
@@ -240,8 +245,8 @@ h3 {
 
 .portfolio {
     border: 2px solid rgb(52, 52, 52);
-    width: 400px;
-    height: 410px;
+    width: 360px;
+    height: 390px;
     display: inline-block;
     margin-right: 30px;
     margin-top: 30px;
@@ -260,6 +265,7 @@ h3 {
 }
 
 footer {
+  
     background-color: #000;
 }
 
@@ -288,53 +294,106 @@ footer {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  
+  .nav__list {
+    position: fixed;
+    left: -100%;
+    top: 4.95rem;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav__list.show {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+
+  .nav__item {
+    margin: 2.5rem 0;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-toggle.show .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.show .hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.show .hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
 @media (min-width: 600px) {
-    h1 {
-        font-size: var(--fs-h1);
-    }
-    .section__subtitle {
-        font-size: var(--fs-h2);
-    }
-    .service__text {
-        display: flex;
-    }
-    .about-me {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    .about-me__body {
-        grid-column: 2;
-        grid-row: 2 / 3;
-    }
-    .section__header {
-        text-align: center;
-        grid-column: 1 / 3;
-        grid-row: 1;
-    }
-    .about-me__image {
-        grid-column: 1;
-        grid-row: 2 / 3;
-    }
+    
+  h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .section__title {
+    margin-top: 1em;
+  }
+  
+  .section__subtitle {
+    font-size: var(--fs-h2);
+  }
+    
+  .service__text {
+    display: flex;
+  }
+    
+  .about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+    
+  .about-me__body {
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+    
+  .section__header {
+    text-align: center;
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+   
+  .about-me__image {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
 }
 
 @media (min-width: 800px) {
-    .banner {
-        height: 750px;
-    }
-    .section__title--right {
-        font-size: 3.5rem;
-    }
-    .service+.service {
-        margin-left: 2em;
-    }
-    .service {
-        margin-top: 10px;
-    }
+  .nav {
+    padding: 3rem 1.5rem;
+  }
+
+  .banner {
+    height: 800px;
+  }
+    
+  .section__title--right {
+    font-size: 3.5rem;
+  }
+    
+  .service+.service {
+    margin-left: 2em;
+  }
 }
 
 @media (min-width: 960px) {
-    h1 {
-        font-size: 4.5rem;
-    }  
+  h1 {
+    font-size: 4.5rem;
+  }  
 }
