@@ -4,9 +4,9 @@
 * [Features](#features)
 
 ## General info
-This project is my portfolio website that displays images, text content, icons, links and descriptions.
+This is my portfolio website that displays images, text content, icons, links and descriptions.
 
-View at
+View at https://reverent-jennings-74e12d.netlify.app/
 	
 ## Technologies
 Project is created with:
