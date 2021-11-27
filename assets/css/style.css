@@ -8,16 +8,16 @@
     --clr-dark: #303030;
     --clr-accent: #359aea;
     --fs-h1: 2.5rem;
-    --fs-h2: 1.25rem;
-    --fs-h3: .80rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1rem;
     --fs-body: .75rem;
 }
 
 @media (min-width: 800px) {
      :root {
         --fs-h1: 3.5rem;
-        --fs-h2: 2.25rem;
-        --fs-h3: 1.25rem;
+        --fs-h2: 2.75rem;
+        --fs-h3: 2rem;
         --fs-body: 1.1rem;
     }
 }
@@ -41,24 +41,6 @@ img {
     max-width: 100%;
 }
 
-.button {
-    display: inline-block;
-    padding: 0.5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bolder);
-    transition: transform 200ms ease-in-out;
-}
-
-.button:hover {
-    transform: scale(1.1);
-}
-
 h1,
 h2,
 h3 {
@@ -77,32 +59,7 @@ h2 {
 
 h3 {
     font-size: var(--fs-h3);
-}
-
-.section__subtitle--intro {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-reg);
-    color: var(--clr-dark);
-}
-
-.section__subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
-}
-
-.section__title {
-    margin-top: 2.5em;
-    margin-bottom: 0.25em;
-}
-
-.section__subtitle--intro,
-.section__subtitle--description,
-.section__subtitle--title {
-    font-family: var(--ff-secondary);
-}
-
-.section__title--larger {
-    font-size: var(--fs-h1);
+    margin-bottom: 1rem;
 }
 
 .nav {
@@ -151,6 +108,46 @@ h3 {
     background-color: var(--clr-light)
 } 
 
+.section__header {
+  text-align: center;
+}
+
+.banner__title {
+    margin-top: 2.5em;
+    margin-bottom: 0.25em;
+}
+
+.banner__subtitle {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    color: var(--clr-dark);
+}
+
+.about-me__title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.about-me__span {
+  color: var(--clr-accent);
+}
+
+.about-me__icons {
+    margin-top: 30px;
+    width: 35px;
+    height: 35px;
+}
+
+.section__title--larger {
+  font-size: var(--fs-h1);
+}
+
+.banner__subtitle--monospace,
+.section__subtitle--description,
+.section__subtitle--title {
+    font-family: var(--ff-secondary);
+}
+
 .banner {
     background-blend-mode: lighten;
     background-color: var(--clr-dark);
@@ -188,12 +185,6 @@ h3 {
     grid-template-columns: repeat(7, 1fr);
 }
 
-.about-me__icons {
-    margin-top: 30px;
-    width: 45px;
-    height: 45px;
-}
-
 .skills {
     background-color: var(--clr-dark);
     background-image: url(../images/laptop.png);
@@ -227,7 +218,7 @@ h3 {
 .service {
     margin: 0 auto;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .service:first-child {
@@ -235,22 +226,41 @@ h3 {
 }
 
 .service__text {
-    width: 380px;
-    margin-top: 30px;
+    width: 325px;
+}
+
+.service__button {
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bolder);
+    transition: transform 200ms ease-in-out;
+}
+
+.service__button:hover {
+    transform: scale(1.1);
 }
 
 .projects {
     text-align: center;
 }
 
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
 .portfolio {
     border: 2px solid rgb(52, 52, 52);
-    width: 360px;
-    height: 390px;
+    width: 300px;
+    height: 310px;
     display: inline-block;
-    margin-right: 30px;
-    margin-top: 30px;
-    border-radius: 5px;
+    margin: 30px 0 0 0;
 }
 
 .portfolio__image {
@@ -339,16 +349,22 @@ footer {
     font-size: var(--fs-h1);
   }
 
-  .section__title {
-    margin-top: 1em;
+  .banner__title {
+    margin-top: 1.5em;
+    white-space: nowrap;
+  }
+
+  .banner__subtitle {
+    font-size: var(--fs-h3);
   }
   
   .section__subtitle {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h3);
   }
     
   .service__text {
     display: flex;
+    width: 380px;
   }
     
   .about-me {
@@ -356,6 +372,10 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .about-me__title {
+    margin-bottom: 0.25em;
+}
     
   .about-me__body {
     grid-column: 2;
@@ -372,6 +392,11 @@ footer {
     grid-column: 1;
     grid-row: 2 / 3;
   }
+
+  .about-me__icons {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -386,7 +411,20 @@ footer {
   .section__title--right {
     font-size: 3.5rem;
   }
-    
+
+  .skills {
+    height: 1115px;
+  }
+
+  .portfolio {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 870px) {
+  .skills {
+    height: 900px;
+  }
   .service+.service {
     margin-left: 2em;
   }
@@ -395,5 +433,11 @@ footer {
 @media (min-width: 960px) {
   h1 {
     font-size: 4.5rem;
+  }  
+}
+
+@media (min-width: 1290px) {
+  .skills {
+    height: 700px;
   }  
 }
