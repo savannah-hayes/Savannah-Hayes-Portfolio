@@ -130,11 +130,11 @@ h3 {
 }
 
 .section__header {
-  text-align: center;
+    text-align: center;
 }
 
 .about-me__title--larger {
-  font-size: var(--fs-h1);
+    font-size: var(--fs-h1);
 }
 
 .banner__subtitle--monospace,
@@ -225,7 +225,7 @@ h3 {
 }
 
 .service__button {
-  display: none;
+    display: none;
 }
 
 .portfolios {
@@ -233,7 +233,7 @@ h3 {
 }
 
 .portfolios h2 {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio {
@@ -247,6 +247,12 @@ h3 {
 .portfolio--bg-grey {
     background-color: rgb(52, 52, 52);
 } 
+
+.portfolio-image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 footer {
     background-color: #000;
